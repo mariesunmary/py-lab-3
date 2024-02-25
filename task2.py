@@ -1,17 +1,17 @@
-def знайти_унікальні_літери(слово1, слово2):
-    унікальні_літери = []
-    for літера in слово1:
-        if літера not in слово2 and слово1.count(літера) == 1:
-            унікальні_літери.append(літера)
-    for літера in слово2:
-        if літера not in слово1 and слово2.count(літера) == 1:
-            унікальні_літери.append(літера)
-    return унікальні_літери
+def find_unique_letters(word1, word2):
+    unique_letters = []
+    for letter in word1:
+        if letter not in word2 and word1.count(letter) == 1:
+            unique_letters.append(letter)
+    for letter in word2:
+        if letter not in word1 and word2.count(letter) == 1:
+            unique_letters.append(letter)
+    return unique_letters
 
 # Задання слів
-слово1 = input("Введіть перше слово: ")
-слово2 = input("Введіть друге слово: ")
+word1 = input("Введіть перше слово: ")
+word2 = input("Введіть друге слово: ")
 
 # Знаходимо та виводимо унікальні літери
-унікальні_літери = знайти_унікальні_літери(слово1, слово2)
-print("Унікальні літери, які зустрічаються тільки один раз у обох словах:", унікальні_літери)
+unique_letters = find_unique_letters(word1, word2)
+print("Унікальні літери, які зустрічаються тільки один раз у обох словах:", unique_letters)
